@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features - Canada Roleplay</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        history.scrollRestoration = "manual";
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <i class="fas fa-maple-leaf"></i>
+            <span>Canada <span class="highlight">RP</span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="rules.html">Rules</a></li>
+            <li><a href="store.html">Store</a></li>
+        </ul>
+    </nav>
+
+    <div class="video-background">
+        <div id="youtube-player"></div>
+        <div class="video-overlay"></div>
+    </div>
+    <div class="page-header">
+        <h1>Server Features</h1>
+    </div>
+
+    <main class="page-content">
+        <div class="features-extended">
+            <div class="feature-category">
+                <h2>Law Enforcement</h2>
+                <div class="feature-items">
+                    <div class="feature-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>TPS</h3>
+                        <p>Patrol the streets of Toronto with authentic TPS vehicles and equipment</p>
+                        <img src="{{ url_for('static', filename='assets/tps-logo.png') }}" alt="TPS Logo" class="department-logo">
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-horse"></i>
+                        <h3>RCMP</h3>
+                        <p>Serve as a federal officer with Canada's iconic Royal Canadian Mounted Police</p>
+                        <img src="{{ url_for('static', filename='assets/rcmp-logo.png') }}" alt="RCMP Logo" class="department-logo">
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-car-alt"></i>
+                        <h3>OPP</h3>
+                        <p>Join the Ontario Provincial Police and patrol the highways and rural areas</p>
+                        <img src="{{ url_for('static', filename='assets/opp-logo.png') }}" alt="OPP Logo" class="department-logo">
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-category">
+                <h2>Additional Features</h2>
+                <div class="feature-items">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <div class="glow"></div>
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                        <h3>Player Management</h3>
+                        <p>Manage player appearance, outfits, and saved characters through vMenu</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <div class="glow"></div>
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>Server Settings</h3>
+                        <p>Access various server settings and configurations through vMenu's interface</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-category">
+                <h2>Civilian Life</h2>
+                <div class="feature-items">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <div class="glow"></div>
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <h3>Gameplay Freedom</h3>
+                        <p>Create your own roleplay scenarios with vMenu's extensive feature set</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <div class="glow"></div>
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h3>Map Options</h3>
+                        <p>Teleport to locations, set waypoints, and explore the entire map with vMenu</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <div class="glow"></div>
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Time & Weather</h3>
+                        <p>Control time of day and weather conditions through vMenu's environment options</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Canada Roleplay</h3>
+                <p class="footer-description">Experience authentic Canadian FiveM roleplay with custom vehicles, maps, and features.</p>
+                <div class="social-links">
+                    <a href="https://discord.gg/crp" target="_blank"><i class="fab fa-discord"></i></a>
+                    <a href="https://www.tiktok.com/@canada..roleplay" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.youtube.com/@CanadaRoleplay_FiveM" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://x.com/CanadaRoleplay_" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="rules.html">Rules</a></li>
+                    <li><a href="store.html">Store</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-server"></i> connect.canadarp.com</li>
+                    <li><i class="fab fa-discord"></i> discord.gg/crp</li>
+                    <li><i class="fas fa-store"></i> canada-roleplay.tebex.io</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Canada Roleplay</p>
+            <span class="footer-credit">Made by Gert</span>
+        </div>
+    </footer>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html> 

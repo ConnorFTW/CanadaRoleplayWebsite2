@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store - Canada Roleplay</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/store.css">
+    <script>
+        history.scrollRestoration = "manual";
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <i class="fas fa-maple-leaf"></i>
+            <span>Canada <span class="highlight">RP</span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="rules.html">Rules</a></li>
+            <li><a href="store.html">Store</a></li>
+        </ul>
+    </nav>
+
+    <div class="video-background">
+        <div id="youtube-player"></div>
+        <div class="video-overlay"></div>
+    </div>
+    <div class="page-header">
+        <h1>Store</h1>
+        <p class="store-subtitle">Support the server and unlock exclusive features</p>
+    </div>
+
+    <main class="page-content">
+        <div class="store-container">
+            <!-- Memberships Section -->
+            <div class="category-header">
+                <h2>Membership Packages</h2>
+                <p>Get access to exclusive features and benefits</p>
+            </div>
+
+            <div class="membership-container">
+                <!-- Regular Supporter -->
+                <div class="store-item membership-item">
+                    <div class="item-header">
+                        <div class="item-image">
+                            <img src="../assets/images/image1.png" alt="Supporter">
+                        </div>
+                        <h3>Supporter</h3>
+                        <div class="price">From $9.99</div>
+                    </div>
+                    <div class="item-content">
+                        <p>Get access to basic supporter perks</p>
+                        <div class="purchase-options">
+                            <select id="supporterOption" class="purchase-select">
+                                <option value="monthly">Monthly - $9.99</option>
+                                <option value="threemonth">3 Months - $24.99</option>
+                                <option value="lifetime">Lifetime - $39.99</option>
+                            </select>
+                        </div>
+                        <div class="button-container">
+                            <a href="https://canada-roleplay.mysellix.io/product/supporter" class="view-details" id="supporterViewDetails" target="_blank">View Details</a>
+                            <a href="https://canada-roleplay.mysellix.io/product/supporter" class="purchase-btn" id="supporterPurchase" target="_blank">Purchase</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ultra Supporter -->
+                <div class="store-item membership-item featured">
+                    <div class="item-badge">Most Popular</div>
+                    <div class="item-header">
+                        <div class="item-image">
+                            <img src="../assets/images/image2.png" alt="Ultra Supporter">
+                        </div>
+                        <h3>Ultra Supporter</h3>
+                        <div class="price">From $19.99</div>
+                    </div>
+                    <div class="item-content">
+                        <p>Get access to all current and future perks</p>
+                        <div class="purchase-options">
+                            <select id="ultraSupporterOption" class="purchase-select">
+                                <option value="monthly">Monthly - $19.99</option>
+                                <option value="threemonth">3 Months - $44.97</option>
+                                <option value="lifetime">Lifetime - $69.99</option>
+                            </select>
+                        </div>
+                        <div class="button-container">
+                            <a href="https://canada-roleplay.mysellix.io/product/ultra-supporter" class="view-details" id="ultraViewDetails" target="_blank">View Details</a>
+                            <a href="https://canada-roleplay.mysellix.io/product/ultra-supporter" class="purchase-btn" id="ultraPurchase" target="_blank">Purchase</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LEO Section -->
+            <div class="category-header">
+                <h2>Law Enforcement Packages</h2>
+                <p>Exclusive content for LEO roleplay</p>
+            </div>
+            <div class="store-grid">
+                <div class="store-item leo-item">
+                    <div class="item-header">
+                        <div class="item-image">
+                            <img src="../assets/images/image4.png" alt="LEO Personal Catalogue">
+                        </div>
+                        <h3>LEO Personal Catalogue</h3>
+                        <div class="price">$24.99</div>
+                    </div>
+                    <div class="item-content">
+                        <p>Access to LEO vehicle catalogue</p>
+                        <div class="button-container">
+                            <a href="https://canada-roleplay.mysellix.io/product/leo-personal-class-2-and-above-from" class="view-details" target="_blank">View Details</a>
+                            <a href="https://canada-roleplay.mysellix.io/product/leo-personal-class-2-and-above-from" class="purchase-btn" target="_blank">Purchase</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="store-item leo-item">
+                    <div class="item-header">
+                        <div class="item-image">
+                            <img src="../assets/images/image5.png" alt="LEO Personal Custom">
+                        </div>
+                        <h3>LEO Personal Custom W/Livery</h3>
+                        <div class="price">$29.99</div>
+                    </div>
+                    <div class="item-content">
+                        <p>Custom LEO vehicle with personal livery</p>
+                        <div class="button-container">
+                            <a href="https://canada-roleplay.mysellix.io/product/leo-personal-custom-w-livery" class="view-details" target="_blank">View Details</a>
+                            <a href="https://canada-roleplay.mysellix.io/product/leo-personal-custom-w-livery" class="purchase-btn" target="_blank">Purchase</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Civilian Section -->
+            <div class="category-header">
+                <h2>Civilian Packages</h2>
+                <p>Enhance your civilian roleplay experience</p>
+            </div>
+            <div class="store-grid">
+                <div class="store-item civilian-item">
+                    <div class="item-header">
+                        <div class="item-image">
+                            <img src="../assets/images/image3.png" alt="Civ Personal">
+                        </div>
+                        <h3>Civilian Personal Package</h3>
+                        <div class="price">From $8.99</div>
+                    </div>
+                    <div class="item-content">
+                        <p>Personal civilian perks and benefits</p>
+                        <div class="purchase-options">
+                            <select id="civPersonalOption" class="purchase-select">
+                                <option value="monthly">Monthly - $8.99</option>
+                                <option value="threemonth">3 Months - $23.99</option>
+                            </select>
+                        </div>
+                        <div class="button-container">
+                            <a href="https://canada-roleplay.mysellix.io/product/civ-personal" class="view-details" id="civViewDetails" target="_blank">View Details</a>
+                            <a href="https://canada-roleplay.mysellix.io/product/civ-personal" class="purchase-btn" id="civPurchase" target="_blank">Purchase</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="store-item civilian-item">
+                    <div class="item-header">
+                        <div class="item-image">
+                            <img src="../assets/images/image7.png" alt="Business Package">
+                        </div>
+                        <h3>Business Package</h3>
+                        <div class="price">$11.99</div>
+                    </div>
+                    <div class="item-content">
+                        <p>Complete business management package</p>
+                        <div class="button-container">
+                            <a href="https://canada-roleplay.mysellix.io/product/buisness-package" class="view-details" target="_blank">View Details</a>
+                            <a href="https://canada-roleplay.mysellix.io/product/buisness-package" class="purchase-btn" target="_blank">Purchase</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vehicle Collections Section -->
+            <div class="category-header">
+                <h2>Vehicle Collections</h2>
+                <p>Premium vehicle packs for every style</p>
+            </div>
+            <div class="store-grid">
+                <div class="store-item vehicle-item">
+                    <div class="item-header">
+                        <div class="item-image">
+                            <img src="../assets/images/image8.png" alt="Drift Pack">
+                        </div>
+                        <h3>Drift Pack</h3>
+                        <div class="price">$8.99</div>
+                        <div class="item-subtitle">10 Custom Vehicles</div>
+                    </div>
+                    <div class="item-content">
+                        <p>Collection of custom drift-tuned vehicles</p>
+                        <div class="button-container">
+                            <a href="https://canada-roleplay.mysellix.io/product/utility-vehicle-pack-5-vehicles-copy" class="view-details" target="_blank">View Details</a>
+                            <a href="https://canada-roleplay.mysellix.io/product/utility-vehicle-pack-5-vehicles-copy" class="purchase-btn" target="_blank">Purchase</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="store-item vehicle-item">
+                    <div class="item-header">
+                        <div class="item-image">
+                            <img src="../assets/images/image9.png" alt="Classic Car Pack">
+                        </div>
+                        <h3>Classic Car Pack</h3>
+                        <div class="price">$6.99</div>
+                        <div class="item-subtitle">11 Classic Vehicles</div>
+                    </div>
+                    <div class="item-content">
+                        <p>Collection of timeless classic vehicles</p>
+                        <div class="button-container">
+                            <a href="https://canada-roleplay.mysellix.io/product/supporter-car-pack-60-vehicles" class="view-details" target="_blank">View Details</a>
+                            <a href="https://canada-roleplay.mysellix.io/product/supporter-car-pack-60-vehicles" class="purchase-btn" target="_blank">Purchase</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="store-item vehicle-item">
+                    <div class="item-header">
+                        <div class="item-image">
+                            <img src="../assets/images/image10.png" alt="Fast & Furious Pack">
+                        </div>
+                        <h3>Fast & Furious Pack</h3>
+                        <div class="price">$6.99</div>
+                        <div class="item-subtitle">10 Movie-Inspired Vehicles</div>
+                    </div>
+                    <div class="item-content">
+                        <p>Movie-inspired performance vehicles</p>
+                        <div class="button-container">
+                            <a href="https://canada-roleplay.mysellix.io/product/classic-car-pack-11-vehicles-copy" class="view-details" target="_blank">View Details</a>
+                            <a href="https://canada-roleplay.mysellix.io/product/classic-car-pack-11-vehicles-copy" class="purchase-btn" target="_blank">Purchase</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="store-item vehicle-item">
+                    <div class="item-header">
+                        <div class="item-image">
+                            <img src="../assets/images/image11.png" alt="Utility Vehicle Pack">
+                        </div>
+                        <h3>Utility Vehicle Pack</h3>
+                        <div class="price">$6.99</div>
+                        <div class="item-subtitle">5 Utility Vehicles</div>
+                    </div>
+                    <div class="item-content">
+                        <p>Essential utility and work vehicles</p>
+                        <div class="button-container">
+                            <a href="https://canada-roleplay.mysellix.io/product/fast-furious-car-pack-10-vehicles-copy" class="view-details" target="_blank">View Details</a>
+                            <a href="https://canada-roleplay.mysellix.io/product/fast-furious-car-pack-10-vehicles-copy" class="purchase-btn" target="_blank">Purchase</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Customization Section -->
+            <div class="category-header">
+                <h2>Customization</h2>
+                <p>Make your experience unique</p>
+            </div>
+            <div class="store-grid">
+                <div class="store-item customization-item">
+                    <div class="item-header">
+                        <div class="item-image">
+                            <img src="../assets/images/image6.png" alt="Custom Callsign">
+                        </div>
+                        <h3>Custom Callsign</h3>
+                        <div class="price">$9.99</div>
+                        <div class="item-subtitle">For 1 Vehicle</div>
+                    </div>
+                    <div class="item-content">
+                        <p>Personal callsign for one vehicle</p>
+                        <div class="button-container">
+                            <a href="https://canada-roleplay.mysellix.io/product/custom-callsign-on-1-vehicle" class="view-details" target="_blank">View Details</a>
+                            <a href="https://canada-roleplay.mysellix.io/product/custom-callsign-on-1-vehicle" class="purchase-btn" target="_blank">Purchase</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Details Modal -->
+    <div class="modal" id="detailsModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <h2 id="modalTitle"></h2>
+                <div id="modalPrice"></div>
+            </div>
+            <div class="modal-body">
+                <div id="modalDescription"></div>
+                <div id="modalFeatures"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-close-btn">Close</button>
+                <a id="modalPurchaseBtn" href="#" class="modal-purchase-btn" target="_blank">Purchase Now</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Canada Roleplay</h3>
+                <p class="footer-description">Experience authentic Canadian FiveM roleplay with custom vehicles, maps, and features.</p>
+                <div class="social-links">
+                    <a href="https://discord.gg/crp" target="_blank"><i class="fab fa-discord"></i></a>
+                    <a href="https://www.tiktok.com/@canada..roleplay" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.youtube.com/@CanadaRoleplay_FiveM" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://x.com/CanadaRoleplay_" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="rules.html">Rules</a></li>
+                    <li><a href="store.html">Store</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-server"></i> connect.canadarp.com</li>
+                    <li><i class="fab fa-discord"></i> discord.gg/crp</li>
+                    <li><i class="fas fa-store"></i> canada-roleplay.tebex.io</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Canada Roleplay</p>
+            <span class="footer-credit">Made by Gert</span>
+        </div>
+    </footer>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="../js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const selectElement = document.getElementById('ultraSupporterOption');
+            const viewDetailsBtn = document.getElementById('ultraViewDetails');
+            const purchaseBtn = document.getElementById('ultraPurchase');
+
+            const updateLinks = (value) => {
+                let url;
+                switch(value) {
+                    case 'threemonth':
+                        url = 'https://canada-roleplay.mysellix.io/product/ultra-support-3-months';
+                        break;
+                    case 'lifetime':
+                        url = 'https://canada-roleplay.mysellix.io/product/ultra-supporter-3-months-copy';
+                        break;
+                    default: // monthly
+                        url = 'https://canada-roleplay.mysellix.io/product/ultra-supporter';
+                        break;
+                }
+                viewDetailsBtn.href = url;
+                purchaseBtn.href = url;
+            };
+
+            selectElement.addEventListener('change', (e) => {
+                updateLinks(e.target.value);
+            });
+
+            // Update Supporter package handling with correct lifetime link
+            const supporterSelect = document.getElementById('supporterOption');
+            const supporterViewBtn = document.getElementById('supporterViewDetails');
+            const supporterPurchaseBtn = document.getElementById('supporterPurchase');
+
+            const updateSupporterLinks = (value) => {
+                let url;
+                switch(value) {
+                    case 'threemonth':
+                        url = 'https://canada-roleplay.mysellix.io/product/supporter-3-months';
+                        break;
+                    case 'lifetime':
+                        url = 'https://canada-roleplay.mysellix.io/product/supporter-3-months-copy'; // Updated lifetime link
+                        break;
+                    default: // monthly
+                        url = 'https://canada-roleplay.mysellix.io/product/supporter';
+                        break;
+                }
+                supporterViewBtn.href = url;
+                supporterPurchaseBtn.href = url;
+            };
+
+            supporterSelect.addEventListener('change', (e) => {
+                updateSupporterLinks(e.target.value);
+            });
+
+            // Add this to your existing DOMContentLoaded event listener
+            const civPersonalSelect = document.getElementById('civPersonalOption');
+            const civViewBtn = document.getElementById('civViewDetails');
+            const civPurchaseBtn = document.getElementById('civPurchase');
+
+            const updateCivLinks = (value) => {
+                let url;
+                switch(value) {
+                    case 'threemonth':
+                        url = 'https://canada-roleplay.mysellix.io/product/civ-personal-3-months';
+                        break;
+                    default: // monthly
+                        url = 'https://canada-roleplay.mysellix.io/product/civ-personal';
+                        break;
+                }
+                civViewBtn.href = url;
+                civPurchaseBtn.href = url;
+            };
+
+            civPersonalSelect.addEventListener('change', (e) => {
+                updateCivLinks(e.target.value);
+            });
+        });
+    </script>
+</body>
+</html> 

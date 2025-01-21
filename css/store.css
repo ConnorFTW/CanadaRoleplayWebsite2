@@ -1,0 +1,234 @@
+.store-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.category-header {
+    grid-column: 1 / -1;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.category-header h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.category-header p {
+    color: #aaa;
+    font-size: 1.1rem;
+}
+
+/* Grid layout for store items */
+.store-item {
+    background: rgba(30, 30, 50, 0.9);
+    border-radius: 12px;
+    padding: 30px;
+    transition: transform 0.2s;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+}
+
+.store-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Featured item styling */
+.membership-item.featured {
+    background: linear-gradient(145deg, rgba(40, 40, 80, 0.9), rgba(60, 60, 100, 0.9));
+}
+
+/* Item header styling */
+.item-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.item-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #ff3e3e;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* Content styling */
+.item-content {
+    text-align: center;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin: 10px 0;
+}
+
+.purchase-options {
+    margin: 15px 0;
+}
+
+/* Update select and option styling */
+.purchase-select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+.purchase-select option {
+    background: rgb(30, 30, 50);
+    color: white;
+    padding: 10px;
+}
+
+/* Optional: Add hover state for options */
+.purchase-select option:hover {
+    background: rgb(40, 40, 70);
+}
+
+/* Update button styling */
+.button-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.view-details, .purchase-btn {
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s;
+    min-width: 100px;
+    text-align: center;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    box-sizing: border-box;
+    height: 35px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.view-details {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.purchase-btn {
+    background: #ff3e3e;
+    color: white;
+    border: 1px solid transparent;
+}
+
+.view-details:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.purchase-btn:hover {
+    background: #ff2525;
+}
+
+/* Keep responsive design for buttons */
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column;
+    }
+    
+    .view-details, .purchase-btn {
+        width: 100%;
+    }
+}
+
+/* Container for non-membership items */
+.category-header + div:not(.membership-container) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    width: 100%;
+    justify-items: center;
+}
+
+/* Size for individual store items */
+.store-item:not(.membership-container .store-item) {
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Remove any conflicting rules */
+.store-container > .store-item:not(.membership-container .store-item) {
+    margin: 0;
+}
+
+/* Update responsive design */
+@media (max-width: 768px) {
+    .membership-container,
+    .category-header + div:not(.membership-container) {
+        grid-template-columns: 1fr;
+    }
+    
+    .store-item:not(.membership-container .store-item) {
+        margin: 0 auto;
+    }
+}
+
+/* Membership container specific styling */
+.membership-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    width: 100%;
+}
+
+/* Grid layout for non-membership items */
+.store-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    width: 100%;
+}
+
+/* Size for store items */
+.store-item {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Update responsive design */
+@media (max-width: 768px) {
+    .membership-container,
+    .store-grid {
+        grid-template-columns: 1fr;
+    }
+} 

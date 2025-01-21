@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Perks - Canada Roleplay</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pages.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <i class="fa-brands fa-canadian-maple-leaf"></i>
+            <span>Canada <span class="highlight">RP</span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('features') }}">Features</a></li>
+            <li><a href="{{ url_for('rules') }}">Rules</a></li>
+            <li><a href="{{ url_for('store') }}">Store</a></li>
+            <li>
+                {% if current_user.is_authenticated %}
+                    <a href="{{ url_for('logout') }}" class="discord-user">
+                        <i class="fab fa-discord"></i> {{ current_user.username }}
+                        <span class="logout-text">Click to Logout</span>
+                    </a>
+                {% else %}
+                    <a href="{{ url_for('login') }}" class="discord-btn">
+                        <i class="fab fa-discord"></i> Login with Discord
+                    </a>
+                {% endif %}
+            </li>
+        </ul>
+    </nav>
+
+    <div class="video-background">
+        <div id="youtube-player"></div>
+        <div class="video-overlay"></div>
+    </div>
+    <div class="page-header">
+        <h1>Business Perks</h1>
+    </div>
+
+    <main class="page-content">
+        <!-- Navigation Buttons -->
+        <div class="store-tabs">
+            <a href="{{ url_for('store') }}" class="tab-btn">
+                <i class="fas fa-crown"></i> VIP Packages
+            </a>
+            <a href="{{ url_for('vehicle_packs') }}" class="tab-btn">
+                <i class="fas fa-car"></i> Vehicle Access
+            </a>
+            <a href="{{ url_for('donator_perks') }}" class="tab-btn">
+                <i class="fas fa-gift"></i> Donator Perks
+            </a>
+            <a href="{{ url_for('business_perks') }}" class="tab-btn active">
+                <i class="fas fa-briefcase"></i> Business Perks
+            </a>
+        </div>
+
+        <!-- VIP Benefits Section -->
+        <div class="store-category">
+            <h2>Business Perks</h2>
+            <div class="store-grid">
+                <div class="store-item">
+                    <div class="store-item-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <div class="store-item-content">
+                        <h3>Business Basic</h3>
+                        <ul class="store-item-features">
+                            <li><i class="fas fa-check"></i> Basic Business Location</li>
+                            <li><i class="fas fa-check"></i> Employee Management</li>
+                            <li><i class="fas fa-check"></i> Basic Inventory System</li>
+                            <li><i class="fas fa-check"></i> Business Discord Role</li>
+                        </ul>
+                        <button class="view-features-btn" onclick="showFeatures('basic')">View All Features</button>
+                        <div class="store-item-price">
+                            <span class="price">$10.00</span>
+                            <a href="#" class="store-btn">Purchase</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="store-item">
+                    <div class="store-item-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="store-item-content">
+                        <h3>Business Advanced</h3>
+                        <ul class="store-item-features">
+                            <li><i class="fas fa-check"></i> Premium Location Options</li>
+                            <li><i class="fas fa-check"></i> Advanced Management Tools</li>
+                            <li><i class="fas fa-check"></i> Custom Business Branding</li>
+                            <li><i class="fas fa-check"></i> Extended Storage Access</li>
+                        </ul>
+                        <button class="view-features-btn" onclick="showFeatures('advanced')">View All Features</button>
+                        <div class="store-item-price">
+                            <span class="price">$14.00</span>
+                            <a href="#" class="store-btn">Purchase</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="store-item">
+                    <div class="store-item-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="store-item-content">
+                        <h3>Business Security</h3>
+                        <ul class="store-item-features">
+                            <li><i class="fas fa-check"></i> Security Personnel</li>
+                            <li><i class="fas fa-check"></i> CCTV System</li>
+                            <li><i class="fas fa-check"></i> Alarm Systems</li>
+                            <li><i class="fas fa-check"></i> Secure Storage</li>
+                        </ul>
+                        <button class="view-features-btn" onclick="showFeatures('security')">View All Features</button>
+                        <div class="store-item-price">
+                            <span class="price">$7.50</span>
+                            <a href="#" class="store-btn">Purchase</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Feature Popup -->
+    <div class="feature-popup" id="featurePopup">
+        <div class="popup-content">
+            <span class="close-popup">&times;</span>
+            <h2 id="popupTitle"></h2>
+            <div class="feature-list" id="popupFeatures"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Canada Roleplay</h3>
+                <p class="footer-description">Experience authentic Canadian FiveM roleplay with custom vehicles, maps, and features.</p>
+                <div class="social-links">
+                    <a href="https://discord.gg/crp" target="_blank"><i class="fab fa-discord"></i></a>
+                    <a href="https://www.tiktok.com/@canada..roleplay" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.youtube.com/@CanadaRoleplay_FiveM" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://x.com/CanadaRoleplay_" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('features') }}">Features</a></li>
+                    <li><a href="{{ url_for('rules') }}">Rules</a></li>
+                    <li><a href="{{ url_for('store') }}">Store</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-server"></i> connect.canadarp.com</li>
+                    <li><i class="fab fa-discord"></i> discord.gg/crp</li>
+                    <li><i class="fas fa-store"></i> canada-roleplay.tebex.io</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Canada Roleplay</p>
+            <span class="footer-credit">Made by Gert</span>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html> 
