@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Vehicles - Canada Roleplay</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        .personals-section {
+            padding: 80px 20px;
+            background: var(--bg-dark);
+            min-height: calc(100vh - 200px);
+        }
+
+        .personals-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .personal-card {
+            background: var(--bg-darker);
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .personal-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .personal-image {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .personal-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .personal-card:hover .personal-image img {
+            transform: scale(1.05);
+        }
+
+        .personal-content {
+            padding: 20px;
+        }
+
+        .personal-content h3 {
+            color: var(--text-primary);
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px 0;
+        }
+
+        .features-list li {
+            color: var(--text-secondary);
+            padding: 5px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .features-list li::before {
+            content: '•';
+            color: var(--accent-color);
+            position: absolute;
+            left: 10px;
+        }
+
+        .request-btn {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            text-align: center;
+            width: 100%;
+        }
+
+        .request-btn:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <i class="fas fa-maple-leaf"></i>
+            <span>Canada <span class="highlight">RP</span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="rules.html">Rules</a></li>
+            <li><a href="store.html">Store</a></li>
+            <li><a href="request.html">Request</a></li>
+        </ul>
+    </nav>
+
+    <section class="personals-section">
+        <div class="container">
+            <h1 class="section-title">Personal Vehicle Catalog</h1>
+            <p class="section-subtitle">Browse our collection of available personal vehicles</p>
+
+            <div class="personals-grid">
+                <!-- Vehicle 1 -->
+                <div class="personal-card">
+                    <div class="personal-image">
+                        <img src="../assets/images/2021.png" alt="2021 Ford Explorer">
+                    </div>
+                    <div class="personal-content">
+                        <h3>2021 Ford Explorer</h3>
+                        <ul class="features-list">
+                            <li>Class 2 or Above Required</li>
+                            <li>400 HP EcoBoost Engine</li>
+                            <li>All-Wheel Drive System</li>
+                            <li>Premium Interior Package</li>
+                        </ul>
+                        <a href="request.html" class="request-btn">Request Personal</a>
+                    </div>
+                </div>
+
+                <!-- Vehicle 2 -->
+                <div class="personal-card">
+                    <div class="personal-image">
+                        <img src="../assets/images/f150.png" alt="Ford F-150">
+                    </div>
+                    <div class="personal-content">
+                        <h3>Ford F-150</h3>
+                        <ul class="features-list">
+                            <li>Class 3 or Above Required</li>
+                            <li>3.5L EcoBoost V6 Engine</li>
+                            <li>4x4 Off-Road Package</li>
+                            <li>Towing Capability</li>
+                        </ul>
+                        <a href="request.html" class="request-btn">Request Personal</a>
+                    </div>
+                </div>
+
+                <!-- Vehicle 3 -->
+                <div class="personal-card">
+                    <div class="personal-image">
+                        <img src="../assets/images/dur.png" alt="Dodge Durango">
+                    </div>
+                    <div class="personal-content">
+                        <h3>Dodge Durango</h3>
+                        <ul class="features-list">
+                            <li>Class 3 or Above Required</li>
+                            <li>HEMI V8 Engine</li>
+                            <li>All-Wheel Drive</li>
+                            <li>Performance Brakes</li>
+                        </ul>
+                        <a href="request.html" class="request-btn">Request Personal</a>
+                    </div>
+                </div>
+
+                <!-- Vehicle 4 -->
+                <div class="personal-card">
+                    <div class="personal-image">
+                        <img src="../assets/images/Tah.png" alt="2019 Chevrolet Tahoe">
+                    </div>
+                    <div class="personal-content">
+                        <h3>2019 Chevrolet Tahoe</h3>
+                        <ul class="features-list">
+                            <li>Class 3 or Above Required</li>
+                            <li>5.3L V8 Engine</li>
+                            <li>4WD System</li>
+                            <li>Luxury Interior</li>
+                        </ul>
+                        <a href="request.html" class="request-btn">Request Personal</a>
+                    </div>
+                </div>
+
+                <!-- Vehicle 5 -->
+                <div class="personal-card">
+                    <div class="personal-image">
+                        <img src="../assets/images/16f150.png" alt="2016 Ford F-150">
+                    </div>
+                    <div class="personal-content">
+                        <h3>2016 Ford F-150</h3>
+                        <ul class="features-list">
+                            <li>Class 3 or Above Required</li>
+                            <li>5.0L V8 Engine</li>
+                            <li>4x4 Capability</li>
+                            <li>Heavy Duty Package</li>
+                        </ul>
+                        <a href="request.html" class="request-btn">Request Personal</a>
+                    </div>
+                </div>
+
+                <!-- Vehicle 6 -->
+                <div class="personal-card">
+                    <div class="personal-image">
+                        <img src="../assets/images/16ram.png" alt="2016 Ram 1500">
+                    </div>
+                    <div class="personal-content">
+                        <h3>2016 Ram 1500</h3>
+                        <ul class="features-list">
+                            <li>Class 3 or Above Required</li>
+                            <li>5.7L HEMI V8</li>
+                            <li>4x4 System</li>
+                            <li>Premium Trim Package</li>
+                        </ul>
+                        <a href="request.html" class="request-btn">Request Personal</a>
+                    </div>
+                </div>
+
+                <!-- Vehicle 7 -->
+                <div class="personal-card">
+                    <div class="personal-image">
+                        <img src="../assets/images/20tahoe.png" alt="2020 Chevrolet Tahoe">
+                    </div>
+                    <div class="personal-content">
+                        <h3>2020 Chevrolet Tahoe</h3>
+                        <ul class="features-list">
+                            <li>Class 3 or Above Required</li>
+                            <li>5.3L V8 Engine</li>
+                            <li>4WD System</li>
+                            <li>Premier Trim Package</li>
+                        </ul>
+                        <a href="request.html" class="request-btn">Request Personal</a>
+                    </div>
+                </div>
+
+                <!-- Vehicle 8 -->
+                <div class="personal-card">
+                    <div class="personal-image">
+                        <img src="../assets/images/21tahoe2.png" alt="2021 Chevrolet Tahoe">
+                    </div>
+                    <div class="personal-content">
+                        <h3>2021 Chevrolet Tahoe</h3>
+                        <ul class="features-list">
+                            <li>Class 3 or Above Required</li>
+                            <li>5.3L V8 Engine</li>
+                            <li>4WD System</li>
+                            <li>High Country Package</li>
+                        </ul>
+                        <a href="request.html" class="request-btn">Request Personal</a>
+                    </div>
+                </div>
+
+                <!-- Vehicle 9 -->
+                <div class="personal-card">
+                    <div class="personal-image">
+                        <img src="../assets/images/2016impala.png" alt="2016 Chevrolet Impala">
+                    </div>
+                    <div class="personal-content">
+                        <h3>2016 Chevrolet Impala</h3>
+                        <ul class="features-list">
+                            <li>Class 1 or Above Required</li>
+                            <li>3.6L V6 Engine</li>
+                            <li>Front-Wheel Drive</li>
+                            <li>LTZ Premium Package</li>
+                        </ul>
+                        <a href="request.html" class="request-btn">Request Personal</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Canada Roleplay</h3>
+                <p class="footer-description">Experience authentic Canadian FiveM roleplay with custom vehicles, maps, and features.</p>
+                <div class="social-links">
+                    <a href="https://discord.gg/crp" target="_blank"><i class="fab fa-discord"></i></a>
+                    <a href="https://www.tiktok.com/@canada..roleplay" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.youtube.com/@CanadaRoleplay_FiveM" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://x.com/CanadaRoleplay_" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="rules.html">Rules</a></li>
+                    <li><a href="store.html">Store</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-server"></i> connect.canadarp.com</li>
+                    <li><i class="fab fa-discord"></i> <a href="https://discord.gg/crp" target="_blank">discord.gg/crp</a></li>
+                    <li><i class="fas fa-store"></i> canada-roleplay.tebex.io</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Canada Roleplay</p>
+        </div>
+    </footer>
+</body>
+</html> 
