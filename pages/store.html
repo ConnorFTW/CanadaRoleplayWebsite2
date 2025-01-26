@@ -12,6 +12,59 @@
     <script>
         history.scrollRestoration = "manual";
     </script>
+    <style>
+        /* Add or update these styles in your existing CSS */
+        .button-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .view-details, 
+        .purchase-btn {
+            width: 100%;
+            text-align: center;
+            padding: 10px 15px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .view-details {
+            background: transparent;
+            border: 1px solid rgba(227, 30, 36, 0.3);
+            color: #fff;
+        }
+
+        .purchase-btn {
+            background: var(--accent-color);
+            color: #fff;
+            border: none;
+        }
+
+        .item-content {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .purchase-options {
+            margin-top: auto;
+            margin-bottom: 10px;
+        }
+
+        .purchase-select {
+            width: 100%;
+            padding: 8px;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -114,6 +167,7 @@
                     <div class="item-content">
                         <p>Access to LEO vehicle catalogue</p>
                         <div class="button-container">
+                            <a href="personals.html" class="view-details">View Catalog</a>
                             <a href="https://canada-roleplay.mysellix.io/product/leo-personal-class-2-and-above-from" class="view-details" target="_blank">View Details</a>
                             <a href="https://canada-roleplay.mysellix.io/product/leo-personal-class-2-and-above-from" class="purchase-btn" target="_blank">Purchase</a>
                         </div>

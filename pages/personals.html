@@ -90,8 +90,13 @@
             display: inline-block;
             background: var(--accent-color);
             color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
+            padding: 12px 24px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            font-size: 1rem;
             text-decoration: none;
             transition: all 0.3s ease;
             text-align: center;
@@ -101,6 +106,158 @@
         .request-btn:hover {
             background: var(--accent-hover);
             transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(227, 30, 36, 0.2);
+        }
+
+        .rules-notice {
+            background: rgba(227, 30, 36, 0.1);
+            border: 1px solid var(--accent-color);
+            border-radius: 10px;
+            padding: 20px 25px;
+            margin: 0 auto 40px;
+            max-width: 800px;
+        }
+
+        .rules-notice h3 {
+            color: var(--text-primary);
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .rules-notice h3 i {
+            color: var(--accent-color);
+        }
+
+        .rules-notice ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .rules-notice li {
+            color: var(--text-secondary);
+            padding: 8px 0;
+            padding-left: 20px;
+            position: relative;
+            line-height: 1.4;
+        }
+
+        .rules-notice li::before {
+            content: '•';
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            position: relative;
+            background: var(--bg-darker);
+            margin: 15% auto;
+            width: 90%;
+            max-width: 500px;
+            border-radius: 12px;
+            border: 1px solid var(--accent-color);
+            box-shadow: 0 0 30px rgba(227, 30, 36, 0.2);
+            animation: modalSlideIn 0.3s ease;
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                transform: translateY(-30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-header {
+            padding: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h2 {
+            color: var(--text-primary);
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .close-modal {
+            color: var(--text-secondary);
+            font-size: 24px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close-modal:hover {
+            color: var(--accent-color);
+        }
+
+        .modal-body {
+            padding: 30px;
+        }
+
+        .spawn-code-display {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        #spawnCodeText {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+            font-family: monospace;
+            font-weight: 600;
+        }
+
+        .copy-btn {
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .copy-btn:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        .spawn-instructions {
+            color: var(--text-secondary);
+            margin: 0;
+            font-size: 0.9rem;
+            text-align: center;
         }
     </style>
 </head>
@@ -124,6 +281,15 @@
             <h1 class="section-title">Personal Vehicle Catalog</h1>
             <p class="section-subtitle">Browse our collection of available personal vehicles</p>
 
+            <div class="rules-notice">
+                <h3><i class="fas fa-exclamation-circle"></i> Personal Vehicle Rules</h3>
+                <ul>
+                    <li>You can switch your personal vehicle selection once per month from this catalog</li>
+                    <li>You must respect unmarked vehicle rules when using personal vehicles</li>
+                    <li>Ride alongs in personal vehicles are not permitted</li>
+                </ul>
+            </div>
+
             <div class="personals-grid">
                 <!-- Vehicle 1 -->
                 <div class="personal-card">
@@ -138,7 +304,7 @@
                             <li>All-Wheel Drive System</li>
                             <li>Premium Interior Package</li>
                         </ul>
-                        <a href="request.html" class="request-btn">Request Personal</a>
+                        <button onclick="showSpawnCode('explorer2021')" class="request-btn">Use Personal</button>
                     </div>
                 </div>
 
@@ -155,7 +321,7 @@
                             <li>4x4 Off-Road Package</li>
                             <li>Towing Capability</li>
                         </ul>
-                        <a href="request.html" class="request-btn">Request Personal</a>
+                        <button onclick="showSpawnCode('f150')" class="request-btn">Use Personal</button>
                     </div>
                 </div>
 
@@ -172,7 +338,7 @@
                             <li>All-Wheel Drive</li>
                             <li>Performance Brakes</li>
                         </ul>
-                        <a href="request.html" class="request-btn">Request Personal</a>
+                        <button onclick="showSpawnCode('durango')" class="request-btn">Use Personal</button>
                     </div>
                 </div>
 
@@ -189,7 +355,7 @@
                             <li>4WD System</li>
                             <li>Luxury Interior</li>
                         </ul>
-                        <a href="request.html" class="request-btn">Request Personal</a>
+                        <button onclick="showSpawnCode('tahoe2019')" class="request-btn">Use Personal</button>
                     </div>
                 </div>
 
@@ -206,7 +372,7 @@
                             <li>4x4 Capability</li>
                             <li>Heavy Duty Package</li>
                         </ul>
-                        <a href="request.html" class="request-btn">Request Personal</a>
+                        <button onclick="showSpawnCode('f1502016')" class="request-btn">Use Personal</button>
                     </div>
                 </div>
 
@@ -223,7 +389,7 @@
                             <li>4x4 System</li>
                             <li>Premium Trim Package</li>
                         </ul>
-                        <a href="request.html" class="request-btn">Request Personal</a>
+                        <button onclick="showSpawnCode('ram2016')" class="request-btn">Use Personal</button>
                     </div>
                 </div>
 
@@ -240,7 +406,7 @@
                             <li>4WD System</li>
                             <li>Premier Trim Package</li>
                         </ul>
-                        <a href="request.html" class="request-btn">Request Personal</a>
+                        <button onclick="showSpawnCode('tahoe2020')" class="request-btn">Use Personal</button>
                     </div>
                 </div>
 
@@ -257,7 +423,7 @@
                             <li>4WD System</li>
                             <li>High Country Package</li>
                         </ul>
-                        <a href="request.html" class="request-btn">Request Personal</a>
+                        <button onclick="showSpawnCode('tahoe2021')" class="request-btn">Use Personal</button>
                     </div>
                 </div>
 
@@ -274,7 +440,58 @@
                             <li>Front-Wheel Drive</li>
                             <li>LTZ Premium Package</li>
                         </ul>
-                        <a href="request.html" class="request-btn">Request Personal</a>
+                        <button onclick="showSpawnCode('impala')" class="request-btn">Use Personal</button>
+                    </div>
+                </div>
+
+                <!-- Vehicle 10 -->
+                <div class="personal-card">
+                    <div class="personal-image">
+                        <img src="../assets/images/2021Tahoe2.png" alt="2021 Chevrolet Tahoe">
+                    </div>
+                    <div class="personal-content">
+                        <h3>2021 Chevrolet Tahoe</h3>
+                        <ul class="features-list">
+                            <li>Class 3 or Above Required</li>
+                            <li>5.3L V8 Engine</li>
+                            <li>4WD System</li>
+                            <li>Z71 Off-Road Package</li>
+                        </ul>
+                        <button onclick="showSpawnCode('tahoe2021')" class="request-btn">Use Personal</button>
+                    </div>
+                </div>
+
+                <!-- Vehicle 11 -->
+                <div class="personal-card">
+                    <div class="personal-image">
+                        <img src="../assets/images/2018Charger.png" alt="2018 Dodge Charger">
+                    </div>
+                    <div class="personal-content">
+                        <h3>2018 Dodge Charger</h3>
+                        <ul class="features-list">
+                            <li>Class 2 or Above Required</li>
+                            <li>5.7L HEMI V8</li>
+                            <li>Rear-Wheel Drive</li>
+                            <li>Sport Suspension</li>
+                        </ul>
+                        <button onclick="showSpawnCode('charger')" class="request-btn">Use Personal</button>
+                    </div>
+                </div>
+
+                <!-- Vehicle 12 -->
+                <div class="personal-card">
+                    <div class="personal-image">
+                        <img src="../assets/images/2016Explorer.png" alt="2016 Ford Explorer">
+                    </div>
+                    <div class="personal-content">
+                        <h3>2016 Ford Explorer</h3>
+                        <ul class="features-list">
+                            <li>Class 1 or Above Required</li>
+                            <li>3.5L V6 Engine</li>
+                            <li>All-Wheel Drive</li>
+                            <li>Limited Package</li>
+                        </ul>
+                        <button onclick="showSpawnCode('explorer2016')" class="request-btn">Use Personal</button>
                     </div>
                 </div>
             </div>
@@ -317,5 +534,71 @@
             <p>&copy; 2024 Canada Roleplay</p>
         </div>
     </footer>
+
+    <div id="spawnCodeModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Vehicle Spawn Code</h2>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="spawn-code-display">
+                    <span id="spawnCodeText"></span>
+                    <button id="copyButton" class="copy-btn">
+                        <i class="fas fa-copy"></i>
+                        Copy
+                    </button>
+                </div>
+                <p class="spawn-instructions">Use this code in-game with the spawn menu (F8)</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    const spawnCodes = {
+        'explorer2021': 'fpiu21tr',
+        'f150': 'm19f150',
+        'durango': '19dur21tr',
+        'tahoe2019': '19tahoe21tr',
+        'f1502016': '18f15021tr',
+        'ram2016': 'legacy16ram',
+        'tahoe2020': 'tahoe',
+        'tahoe2021': 'c322tahoeucb',
+        'impala': '13caprice21',
+        'charger': '18charger21',
+        'explorer2016': '16fpiu21tr'
+    };
+
+    const modal = document.getElementById('spawnCodeModal');
+    const closeBtn = document.querySelector('.close-modal');
+    const spawnCodeText = document.getElementById('spawnCodeText');
+    const copyButton = document.getElementById('copyButton');
+
+    function showSpawnCode(vehicleId) {
+        const code = spawnCodes[vehicleId];
+        spawnCodeText.textContent = code;
+        modal.style.display = 'block';
+    }
+
+    closeBtn.onclick = function() {
+        modal.style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    }
+
+    copyButton.onclick = function() {
+        navigator.clipboard.writeText(spawnCodeText.textContent).then(() => {
+            const originalText = copyButton.innerHTML;
+            copyButton.innerHTML = '<i class="fas fa-check"></i> Copied!';
+            setTimeout(() => {
+                copyButton.innerHTML = originalText;
+            }, 2000);
+        });
+    }
+    </script>
 </body>
 </html> 
